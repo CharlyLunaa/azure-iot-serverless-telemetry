@@ -10,17 +10,17 @@ from azure.iot.device import IoTHubDeviceClient, Message
 load_dotenv()
 
 def generar_telemetria(device_id):
-    # 1. Generar los datos aleatorios
+    # Generar los datos aleatorios
     cpu = random.randint(0, 100)
     
-    # 2. Generar los datos de red
+    # Generar los datos de red
     latencia = random.randint(5, 150)  
     perdida = random.randint(0, 5)
 
-    # 3. Hora actual en formato de texto ISO 8601
+    # Hora actual en formato de texto ISO 8601
     ahora = datetime.now().isoformat()
 
-    # 4. Crear un diccionario en Python 
+    # Crear un diccionario en Python 
     payload = {
         "device_id": device_id,
         "timestamp": ahora,
@@ -29,7 +29,7 @@ def generar_telemetria(device_id):
         "packet_loss_pct": perdida
     }
 
-    # 5. Convertir el diccionario de Python a un string con formato JSON
+    # Convertir el diccionario de Python a un string con formato JSON
     return json.dumps(payload)
 
 
@@ -59,8 +59,3 @@ if __name__ == "__main__":
         print(f"Enviado a Azure: {datos_json}")
         
         time.sleep(5)
-
-#mosquitto_sub -h localhost -t telemetry/upiita-router-01
-
-#cd OneDrive\Documentos\CloudTelemetry-Agent
-#python data.py 

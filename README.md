@@ -41,12 +41,12 @@ El proyecto está dividido en dos espacios de trabajo independientes para emular
  ┣ 📂 CloudTelemetry-Agent         # Código que se ejecuta en el dispositivo físico (Router)
  ┃ ┣ 📜 data.py                    # Generador y transmisor MQTT
  ┃ ┣ 📜 .env                       # (Ignorado por Git) Credenciales del dispositivo
- ┃ ┗ 📜 .gitignore
- ┗ 📂 CloudTelemetry-Function      # Código que reside en los servidores de Microsoft Azure
-   ┣ 📜 function_app.py            # Lógica principal del Serverless y Output Bindings
-   ┣ 📜 local.settings.json        # (Ignorado por Git) Cadenas de conexión a la nube
-   ┣ 📜 requirements.txt           # Dependencias de Python (azure-functions)
-   ┗ 📜 host.json                  # Configuración del motor de Azure Functions
+ ┣ 📂 CloudTelemetry-Function      # Código que reside en los servidores de Microsoft Azure
+ ┃ ┣ 📜 function_app.py            # Lógica principal del Serverless y Output Bindings
+ ┃ ┣ 📜 local.settings.json        # (Ignorado por Git) Cadenas de conexión a la nube
+ ┃ ┣ 📜 requirements.txt           # Dependencias de Python (azure-functions)
+ ┃ ┗ 📜 host.json                  # Configuración del motor de Azure Functions
+ ┗ 📜 .gitignore                 
 ```
 
 ## Requisitos Previos y Ejecución Local
