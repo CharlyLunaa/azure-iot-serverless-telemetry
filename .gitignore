@@ -1,0 +1,17 @@
+# Credenciales y Entornos Virtuales
+.env
+local.settings.json
+__pycache__/
+*.pyc
+
+# Emulador Local Azurite 
+__blobstorage__/
+__queuestorage__/
+_azurite_db_*.json
+AzuriteConfig/
+CloudTelemetry-Function/__blobstorage__/
+CloudTelemetry-Function/__queuestorage__/
+CloudTelemetry-Function/AzuriteConfig/
+
+# Configuración del Editor
+.vscode/
